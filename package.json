@@ -1,0 +1,33 @@
+{
+  "name": "shop-product-crud",
+  "version": "1.0.0",
+  "description": "Test task - shop's products CRUD via Node.js.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "test_task",
+    "crud",
+    "nodejs"
+  ],
+  "author": "Andrii Okhrimenko <aokhrimenko25@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "@types/express": "^4.17.8",
+    "@types/mongoose": "^5.7.36",
+    "@types/dotenv": "^8.2.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.5"
+  }
+}
