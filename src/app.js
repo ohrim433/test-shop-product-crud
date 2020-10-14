@@ -3,12 +3,15 @@ require('dotenv').config();
 const express = require('express');
 
 const { config: { PORT } } = require('./config');
-const { connectToDb } = require('./helpers');
+const { connectToDb } = require('./db');
+const { productRouter } = require('./routes');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use('/products', productRouter);
 
 async function startApp() {
   try {

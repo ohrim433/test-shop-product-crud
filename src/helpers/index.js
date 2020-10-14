@@ -1,1 +1,1 @@
-module.exports.connectToDb = require('./connect-to-db');
+module.exports.responseStatusCodesEnum = require('./enums/response-status-codes.enum');
