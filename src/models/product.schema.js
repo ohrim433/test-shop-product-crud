@@ -1,5 +1,7 @@
 const { model, Schema } = require('mongoose');
 
+const { dbTableNamesEnum } = require('../helpers');
+
 const ProductModel = new Schema({
   title: { type: String, required: true },
   price: { type: String, required: true },
@@ -16,4 +18,4 @@ const ProductModel = new Schema({
   timestamps: true,
 });
 
-module.exports = model('products', ProductModel); // TODO enum
+module.exports = model(dbTableNamesEnum.PRODUCT, ProductModel);
