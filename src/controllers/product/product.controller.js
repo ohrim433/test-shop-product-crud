@@ -6,9 +6,9 @@ class ProductController {
     try {
       const product = req.body;
 
-      await ProductService.createProduct(product);
+      const createdProduct = await ProductService.createProduct(product);
 
-      res.sendStatus(CREATED);
+      res.sendStatus(CREATED).json(createdProduct);
     } catch (e) {
       res.end(e.message);
     }
