@@ -5,8 +5,10 @@ const { dbTableNamesEnum } = require('../helpers');
 const ProductModel = new Schema({
   title: { type: String, required: true },
   price: { type: String, required: true },
-  // category: [{ type: Schema.Types.ObjectId, ref: 'categories', required: true }], // TODO
-  // supplier: { type: Schema.Types.ObjectId, ref: 'suppliers' }, // TODO
+  category: [
+    { type: Schema.Types.ObjectId, ref: dbTableNamesEnum.CATEGORIES, required: true },
+  ],
+  supplier: { type: String },
   expirationDate: { type: Date, default: null },
   description: { type: String, required: true },
   measure: { type: String, required: true },
@@ -18,4 +20,4 @@ const ProductModel = new Schema({
   timestamps: true,
 });
 
-module.exports = model(dbTableNamesEnum.PRODUCT, ProductModel);
+module.exports = model(dbTableNamesEnum.PRODUCTS, ProductModel);

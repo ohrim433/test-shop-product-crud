@@ -1,5 +1,5 @@
 module.exports = {
-  PRODUCT: 'products',
-  CATEGORY: 'categories',
-  SUPPLIER: 'suppliers',
+  PRODUCTS: 'products',
+  CATEGORIES: 'categories',
+  SUPPLIERS: 'suppliers',
 };
